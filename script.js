@@ -104,13 +104,19 @@ const backFive = document.querySelector(".backFive");
 const nextFive = document.querySelector(".nextFive");
 const backSix = document.querySelector(".backSix");
 const nextSix = document.querySelector(".nextSix");
+const backSeven = document.querySelector(".backSeven");
+const nextSeven = document.querySelector(".nextSeven");
+const backEight = document.querySelector(".backEight");
+const nextEight = document.querySelector(".nextEight")
 
-const photos = ["screenFish.webp", "responsiveFish.webp", "screenTwoFish.webp"]
-const photosTwo = ["screenYoga.webp", "responsiveYoga.webp", "screenTwoYoga.webp"]
-const photosThree = ["screenFl.webp", "responsiveFl.webp", "screenTwoFl.webp"]
-const photosFour = ["screenMeteo.webp", "responsiveMeteo.webp", "screenTwoMeteo.webp"]
-const photosFive = ["screenToDo.webp", "responsiveToDo.webp", "screenTwoToDo.webp"]
-const photosSix = ["screenUS.webp", "responsiveUS.webp", "screenTwoUS.webp"]
+const photos = ["imgPng/screenSilk.webp", "imgPng/responsiveSilk.webp", "imgPng/screenTwoSilk.webp"]
+const photosTwo = ["imgPng/screenTodo.webp", "imgPng/responsiveTodo.webp", "imgPng/screenTwoTodo.webp"]
+const photosThree = ["imgPng/screenStar.webp", "imgPng/responsiveStar.webp", "imgPng/screenTwoStar.webp"]
+const photosFour = ["imgPng/screenYoga.webp", "imgPng/responsiveYoga.webp", "imgPng/screenTwoYoga.webp"]
+const photosFive = ["imgPng/screenFl.webp", "imgPng/responsiveFl.webp", "imgPng/screenTwoFl.webp"]
+const photosSix = ["imgPng/screenFish.webp", "imgPng/responsiveFish.webp", "imgPng/screenTwoFish.webp"]
+const photosSeven = ["imgPng/screenPerfomance.webp", "imgPng/responsivePerfomance.webp", "imgPng/screenTwoPerfomance.webp"]
+const photosEight = ["imgPng/screenUS.webp", "imgPng/responsiveUS.webp", "imgPng/screenTwoUS.webp"]
 
 let i = 0;
 
@@ -217,6 +223,39 @@ backSix.addEventListener("click", () => {
   document.querySelector(".picturesSix").src = photosSix [i]
 })
 
+//Art House
+nextSeven.addEventListener("click", () => {
+  i++;
+  if (i > photosSeven.length - 1) {
+      i = 0;
+  }
+  document.querySelector(".picturesSeven").src = photosSeven [i];
+})
+
+backSeven.addEventListener("click", () => {
+  i--;
+  if (i < 0) {
+      i = photosSeven.length - 1;
+  }
+  document.querySelector(".picturesSeven").src = photosSeven [i]
+})
+
+//US
+nextEight.addEventListener("click", () => {
+  i++;
+  if (i > photosEight.length - 1) {
+      i = 0;
+  }
+  document.querySelector(".picturesEight").src = photosEight [i];
+})
+
+backEight.addEventListener("click", () => {
+  i--;
+  if (i < 0) {
+      i = photosEight.length - 1;
+  }
+  document.querySelector(".picturesEight").src = photosEight [i]
+})
 
 //scroll go to back
 
