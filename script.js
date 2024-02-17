@@ -107,7 +107,11 @@ const nextSix = document.querySelector(".nextSix");
 const backSeven = document.querySelector(".backSeven");
 const nextSeven = document.querySelector(".nextSeven");
 const backEight = document.querySelector(".backEight");
-const nextEight = document.querySelector(".nextEight")
+const nextEight = document.querySelector(".nextEight");
+const backNine = document.querySelector(".backNine");
+const nextNine = document.querySelector(".nextNine");
+const backTen = document.querySelector(".backTen");
+const nextTen = document.querySelector(".nextTen");
 
 const photos = ["imgPng/screenSilk.webp", "imgPng/responsiveSilk.webp", "imgPng/screenTwoSilk.webp"]
 const photosTwo = ["imgPng/screenTodo.webp", "imgPng/responsiveTodo.webp", "imgPng/screenTwoTodo.webp"]
@@ -117,6 +121,16 @@ const photosFive = ["imgPng/screenFl.webp", "imgPng/responsiveFl.webp", "imgPng/
 const photosSix = ["imgPng/screenFish.webp", "imgPng/responsiveFish.webp", "imgPng/screenTwoFish.webp"]
 const photosSeven = ["imgPng/screenPerfomance.webp", "imgPng/responsivePerfomance.webp", "imgPng/screenTwoPerfomance.webp"]
 const photosEight = ["imgPng/screenUS.webp", "imgPng/responsiveUS.webp", "imgPng/screenTwoUS.webp"]
+const photosNine = [
+  "imgPng/screenSwagger.webp",
+  "imgPng/screenDoc.webp",
+  "imgPng/screenSchemas.webp",
+];
+const photosTen = [
+  "imgPng/screenMusic1.webp",
+  "imgPng/screenMusic2.webp",
+  "imgPng/screenMusic3.webp",
+];
 
 let i = 0;
 
@@ -256,6 +270,40 @@ backEight.addEventListener("click", () => {
   }
   document.querySelector(".picturesEight").src = photosEight [i]
 })
+
+//nine  backend team project music app
+nextNine.addEventListener("click", () => {
+  i++;
+  if (i > photosNine.length - 1) {
+    i = 0;
+  }
+  document.querySelector(".picturesNine").src = photosNine[i];
+});
+
+backNine.addEventListener("click", () => {
+  i--;
+  if (i < 0) {
+    i = photosNine.length - 1;
+  }
+  document.querySelector(".picturesNine").src = photosNine[i];
+});
+
+//Ten frontend team project music app
+nextTen.addEventListener("click", () => {
+  i++;
+  if (i > photosTen.length - 1) {
+    i = 0;
+  }
+  document.querySelector(".picturesTen").src = photosTen[i];
+})
+
+backTen.addEventListener("click", () => {
+  i--;
+  if (i < 0) {
+    i = photosTen.length - 1;
+  }
+  document.querySelector(".picturesTen").src = photosTen[i];
+});
 
 //scroll go to back
 
